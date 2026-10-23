@@ -1,8 +1,0 @@
-{
-  "redirects": [
-    { "source": "/admin", "destination": "https://kikus-darwon.vercel.app/admin", "permanent": false },
-    { "source": "/admin/:path*", "destination": "https://kikus-darwon.vercel.app/admin/:path*", "permanent": false },
-    { "source": "/login", "destination": "https://kikus-darwon.vercel.app/login", "permanent": false },
-    { "source": "/rezervacia", "destination": "https://kikus-darwon.vercel.app/rezervacia", "permanent": false }
-  ]
-}

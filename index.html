@@ -1,295 +1,314 @@
 <!doctype html><html lang="sk"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Kozmetický salón Kikuš · nechty, hybridné solárium a kozmetika v Topoľčanoch — neoficiálny návrh</title>
-<meta name="description" content="Neoficiálny návrh webu pre Kozmetický salón Kikuš v Topoľčanoch — nechtové štúdio, hybridné LED solárium a kozmetika v budove Meridiem na Streďanskej.">
-<meta name="theme-color" content="#17181a">
+<title>Kozmetický salón Kikuš · kozmetika, nechty a hybridné solárium v Topoľčanoch — neoficiálny návrh</title>
+<meta name="description" content="Kozmetický salón Kikuš v Topoľčanoch — kozmetika, nechtové štúdio a hybridné solárium, Streďanská 5075/13. Neoficiálny návrh webu od Darwon.">
+<meta name="theme-color" content="#F3F1F0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Questrial&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#17181a; --panel:#222427; --panelhi:#2c2f33; --well:#0e0d0c;
-  --line:rgba(236,230,220,.12); --tx:#ece8e1; --tx2:#aaa69f;
-  --amb:#ffb648; --ambhi:#ffd590; --ambdim:#3a2a15; --ambink:#2a1906;
-  --pink:#ff7ba6; --pinkink:#2b0c17;
-  --disp:"Audiowide","Arial Black",sans-serif; --text:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#F3F1F0; --tint:#EAE6E4; --ink:#2A1F26; --muted:#65585F; --line:rgba(42,31,38,.16); --line-strong:rgba(42,31,38,.32);
+  --acc:#8E4A66; --acc-dark:#743A52; --on-dark:#F3F1F0; --muted-dark:#BDB0B6; --line-dark:rgba(243,241,240,.18);
+  --serif:'Bellefair', Georgia, 'Times New Roman', serif;
+  --sans:'Questrial', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --wrap:1200px; --gut:40px;
 }
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 16.5px/1.6 var(--text)}
-img{max-width:100%;height:auto}
-a{color:inherit}
-a[href^="tel:"]{white-space:nowrap}
-h1,h2,h3,p,ul,dl,dd,figure,blockquote{margin:0;padding:0}
-ul{list-style:none}
-:focus-visible{outline:2px solid var(--amb);outline-offset:3px}
-.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
-.silk{font:700 11.5px/1.3 var(--text);letter-spacing:.24em;text-transform:uppercase;color:var(--tx2)}
-.u{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
-a:hover .u,a.u:hover{background-size:100% 1px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);font-synthesis:none;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.005em}
+p{margin:0}
+.wrap{max-width:calc(var(--wrap) + 2*var(--gut));margin:0 auto;padding:0 var(--gut)}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.u{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s ease}
+.u:hover{background-size:100% 1px}
 
-/* Darwon pruh */
-.notice{background:#0b0b0c;color:#c9c5be;font-size:13px;line-height:1.45;padding:8px 16px;text-align:center;border-bottom:1px solid var(--line)}
-
-/* LED */
-.led{flex:none;display:inline-block;width:9px;height:9px;border-radius:50%;background:#3a2f22;box-shadow:inset 0 1px 2px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04)}
-.led.on,a:hover>.led{background:radial-gradient(circle at 40% 35%,#fff3d6,var(--amb) 55%,#c27a17);box-shadow:0 0 8px 2px rgba(255,182,72,.55)}
-.led{transition:background .2s,box-shadow .2s}
+/* pruh */
+.notice{background:var(--tint);border-bottom:1px solid var(--line);font-size:13px;line-height:1.45;color:var(--muted);text-align:center;padding:9px 16px}
 
 /* hlavička */
-.top{display:flex;align-items:center;gap:34px;padding:22px 0}
-.brand{display:flex;align-items:center;gap:14px;margin-right:auto;text-decoration:none}
-.brand b{font:400 27px/1 var(--disp);letter-spacing:.02em}
-.brand span{font:600 12px/1.3 var(--text);letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);border-left:1px solid var(--line);padding-left:14px}
-.leds{display:flex;gap:28px}
-.leds a{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font:700 12px/1 var(--text);letter-spacing:.2em;text-transform:uppercase}
-.top .tel{font:600 16px/1 var(--text);font-variant-numeric:tabular-nums;text-decoration:none}
-.start{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 26px;border-radius:999px;background:var(--pink);color:var(--pinkink);text-decoration:none;font:700 14px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;box-shadow:0 0 0 4px rgba(255,123,166,.14),inset 0 1px 0 rgba(255,255,255,.45);white-space:nowrap;transition:box-shadow .2s}
-.start:hover{box-shadow:0 0 0 6px rgba(255,123,166,.22),0 0 22px rgba(255,123,166,.35),inset 0 1px 0 rgba(255,255,255,.45)}
-.start::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pinkink);opacity:.75}
-.top .start{min-height:44px;padding:0 20px;font-size:12.5px}
+.head{border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;gap:40px;min-height:80px}
+.brand{display:flex;align-items:baseline;gap:16px;margin-right:auto}
+.brand b{font:400 30px/1 var(--serif);letter-spacing:.01em}
+.brand span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:32px;font-size:15px}
+.head-tel{font-size:15px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:2px;font:400 15px/1 var(--sans);letter-spacing:.04em;transition:background-color .2s ease,color .2s ease,border-color .2s ease;white-space:nowrap}
+.btn-acc{background:var(--acc);color:#fff}
+.btn-acc:hover{background:var(--acc-dark)}
+.btn-line{border:1px solid var(--line-strong);color:var(--ink)}
+.btn-line:hover{border-color:var(--ink)}
+.head .btn{min-height:44px;padding:0 20px}
 
-/* panel solária */
-.panel{position:relative;background:linear-gradient(180deg,var(--panelhi),var(--panel) 38%,#1f2124);border-radius:30px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07),inset 0 -1px 0 rgba(0,0,0,.5),0 40px 80px -40px rgba(0,0,0,.8)}
-.hero{display:grid;grid-template-columns:5fr 7fr;gap:44px;padding:46px 46px 0;min-height:min(560px,80vh)}
-.intro{padding-bottom:40px;display:flex;flex-direction:column}
-h1{font:400 clamp(34px,4vw,50px)/1.08 var(--disp);margin:16px 0 22px;letter-spacing:.005em}
-h1 em{font-style:normal;color:var(--amb);text-shadow:0 0 22px rgba(255,182,72,.45)}
-.quote{font:500 20px/1.45 var(--text)}
-.quote small{display:block;margin-top:4px;font-size:13px;color:var(--tx2);font-weight:500}
-.lede{margin-top:14px;color:var(--tx2);max-width:30em}
-.cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:30px}
-.call{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;font:700 13.5px/1 var(--text);letter-spacing:.12em;text-transform:uppercase}
-.fine{margin-top:12px;font-size:13.5px;color:var(--tx2)}
-
-/* displej */
-.well{align-self:start;background:radial-gradient(120% 90% at 50% 40%,#16120d,var(--well) 70%);border-radius:18px;padding:24px 30px 22px;box-shadow:inset 0 2px 10px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,182,72,.08),0 1px 0 rgba(255,255,255,.06)}
-.wtop{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.st{display:flex;align-items:center;gap:10px;font:600 15px/1.35 var(--text);color:var(--ambhi)}
-.st b{font-weight:700}
-#statusDot{flex:none;width:11px;height:11px;border-radius:50%;background:#3a2f22;box-shadow:inset 0 1px 2px rgba(0,0,0,.7)}
-#statusDot.is-open{background:radial-gradient(circle at 40% 35%,#fff3d6,var(--amb) 55%,#c27a17);box-shadow:0 0 10px 3px rgba(255,182,72,.55)}
-#statusDot.is-closing{background:radial-gradient(circle at 40% 35%,#ffe1ec,var(--pink) 60%);box-shadow:0 0 10px 3px rgba(255,123,166,.5)}
-#todayLabel{font:600 13px/1 var(--text);letter-spacing:.08em;color:var(--tx2);font-variant-numeric:tabular-nums}
-#dispLabel{display:block;margin-top:26px;font:700 12px/1.3 var(--text);letter-spacing:.24em;text-transform:uppercase;color:#b9843a}
-.digits{position:relative;margin:8px 0 4px;font:400 clamp(60px,17.5vw,138px)/1 var(--disp);white-space:nowrap}
-.digits i,.digits b{display:inline-block;font-style:normal;font-weight:400;text-align:center}
-.digits i{width:.88em}.digits b{width:.34em}
-.ghost{position:absolute;left:0;top:0;color:var(--ambdim);opacity:.42}
-#dispDigits{position:relative;color:var(--amb);text-shadow:0 0 6px rgba(255,190,90,.65),0 0 28px rgba(255,160,50,.4)}
-.unit{display:flex;justify-content:space-between;gap:12px;font:700 11px/1 var(--text);letter-spacing:.24em;text-transform:uppercase;color:#7d5b2c;padding-right:4px}
-.prog{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,182,72,.12)}
-.prog a{display:inline-flex;align-items:center;gap:10px;min-height:40px;text-decoration:none;font:400 15px/1 var(--disp);letter-spacing:.04em;color:#d9c9ae}
-.rate{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:22px 2px 30px}
-.rate b{font:800 34px/1 var(--text);font-variant-numeric:tabular-nums;color:var(--tx)}
-.rate span{color:var(--tx2);font-size:15px}
+/* hero */
+.hero{min-height:min(600px,82vh);display:flex;align-items:center;padding:72px 0;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;width:100%}
+.hero-text{grid-column:1 / span 7}
+.hero h1{font-size:clamp(44px,5.6vw,76px);line-height:1.04;margin:24px 0 32px;max-width:11em}
+.lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:34em}
+.lead strong{font-weight:400;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.facts{grid-column:9 / span 4;align-self:end;margin:0;border-top:1px solid var(--line-strong)}
+.facts div{padding:16px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.facts dd{margin:0;font-size:17px;line-height:1.5}
+.facts .big{font:400 40px/1 var(--serif);margin-right:8px;vertical-align:-3px}
+.facts small{font-size:14px;color:var(--muted)}
+.state{display:flex;align-items:baseline;gap:10px}
+.state b{font-weight:400}
+#statusDot{flex:none;width:8px;height:8px;border-radius:999px;background:#B3A8AD;transform:translateY(-2px)}
+#statusDot.is-open{background:var(--acc)}
+#statusDot.is-closing{background:transparent;box-shadow:inset 0 0 0 2px var(--acc)}
 
 /* sekcie */
-section.band{padding:96px 0 0}
-.head{display:grid;grid-template-columns:5fr 7fr;gap:44px;align-items:end;margin-bottom:34px}
-.head .silk{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.head .silk::after{content:"";flex:1;height:1px;background:var(--line)}
-h2{font:400 clamp(28px,3vw,38px)/1.12 var(--disp)}
-.head p{color:var(--tx2);max-width:36em}
-.demo{display:inline-block;padding:4px 10px;border:1px dashed rgba(236,230,220,.3);border-radius:999px;font:700 11px/1.4 var(--text);letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);margin-top:12px}
+.sec{padding:120px 0}
+.sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;margin-bottom:72px}
+.sec-head .label{grid-column:1 / span 6;grid-row:1}
+.sec-head h2{grid-column:1 / span 6;grid-row:2;font-size:clamp(34px,3.8vw,52px);line-height:1.1}
+.sec-head p{grid-column:8 / span 5;grid-row:2;align-self:end;color:var(--muted)}
 
-/* programy */
-.keys{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:18px}
-.key{position:relative;border-radius:22px;padding:28px 28px 30px;background:linear-gradient(180deg,#2a2c30,#222427);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),inset 0 -2px 0 rgba(0,0,0,.45);display:flex;flex-direction:column;min-height:300px}
-.key .led{margin-bottom:24px}
-.key h3{font:400 26px/1.15 var(--disp);letter-spacing:.02em}
-.key .sub{margin-top:6px;font-weight:600;color:var(--tx2)}
-.key p.t{margin-top:auto;padding-top:26px;font-size:15px;color:var(--tx2)}
-.key.lit{background:linear-gradient(170deg,#ffc76a,var(--amb) 45%,#f29d2c);color:var(--ambink);box-shadow:0 0 0 1px rgba(255,214,150,.6),0 0 60px -10px rgba(255,170,60,.55),inset 0 1px 0 rgba(255,255,255,.5)}
-.key.lit .sub{color:#4a2e0b}
-.key.lit .led{background:radial-gradient(circle at 40% 35%,#fff,#fff3d6 50%,#ffd590);box-shadow:0 0 10px 3px rgba(255,255,255,.7)}
-.key.lit h3{font-size:32px}
-.key.lit blockquote{margin-top:22px;font:600 21px/1.4 var(--text)}
-.key.lit cite{display:block;margin-top:10px;font:600 13px/1.4 var(--text);font-style:normal;color:#4a2e0b}
-.key.lit .go{margin-top:auto;padding-top:24px;display:inline-flex;align-items:center;gap:10px;min-height:44px;font:700 13px/1 var(--text);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ambink)}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line-strong)}
+.svc{padding:40px 40px 8px;border-left:1px solid var(--line)}
+.svc:first-child{padding-left:0;border-left:0}
+.svc:last-child{padding-right:0}
+.svc .label{display:block;margin-bottom:24px}
+.svc h3{font-size:34px;line-height:1.1;margin-bottom:16px}
+.svc p{color:var(--muted)}
+.svc p + p{margin-top:16px}
+.svc q{display:block;quotes:"„" "“";font:400 22px/1.4 var(--serif);color:var(--ink);margin:24px 0 8px}
+.svc .src{font-size:14px}
+.note{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:24px !important}
 
-/* hodiny */
-.week{display:grid;grid-template-columns:repeat(7,1fr);border-radius:22px;overflow:hidden;background:var(--well);box-shadow:inset 0 2px 10px rgba(0,0,0,.8),inset 0 0 0 1px rgba(255,182,72,.07)}
-.week li{padding:22px 18px 24px;border-left:1px solid rgba(255,182,72,.08);display:flex;flex-direction:column;gap:14px}
-.week li:first-child{border-left:0}
-.week .d{display:flex;align-items:center;gap:10px;font:400 19px/1 var(--disp);color:#cdbfa8}
-.week .h{font:600 17px/1.35 var(--text);font-variant-numeric:tabular-nums;color:#c9b597}
-.week .h small{display:block;font-weight:500;color:#7f6a4c}
-.week .x{color:#6c5f4d;font-weight:500}
-.week li[data-today]{background:linear-gradient(180deg,rgba(255,182,72,.12),rgba(255,182,72,.03))}
-.week li[data-today] .d{color:var(--amb);text-shadow:0 0 14px rgba(255,182,72,.5)}
-.week li[data-today] .h{color:var(--ambhi)}
-.week li[data-today] .led{background:radial-gradient(circle at 40% 35%,#fff3d6,var(--amb) 55%,#c27a17);box-shadow:0 0 8px 2px rgba(255,182,72,.55)}
-.wnote{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:16px;font-size:14px;color:var(--tx2)}
+/* termín — jediná tmavá sekcia */
+.call{background:var(--ink);color:var(--on-dark);padding:120px 0}
+.call .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.call-text{grid-column:1 / span 5}
+.call .label{color:var(--muted-dark)}
+.call h2{font-size:clamp(34px,3.8vw,52px);line-height:1.1;margin:24px 0}
+.call p{color:var(--muted-dark);max-width:30em}
+.call-side{grid-column:7 / span 6;border-top:1px solid var(--line-dark);padding-top:24px}
+.call-tel{display:block;font:400 clamp(48px,7.2vw,104px)/1 var(--serif);letter-spacing:.01em;margin-bottom:40px}
+.call-tel:hover{color:#fff}
+.call .btn-line{border-color:var(--line-dark);color:var(--on-dark)}
+.call .btn-line:hover{border-color:var(--on-dark)}
+.call .btn-acc{background:var(--on-dark);color:var(--ink)}
+.call .btn-acc:hover{background:#fff}
 
-/* kontakt */
-.contact{display:grid;grid-template-columns:5fr 7fr;gap:44px;padding:44px 46px 46px}
-.addr{font:600 26px/1.35 var(--text);font-style:normal;margin:18px 0 26px}
-.addr span{display:block;font-size:17px;font-weight:500;color:var(--tx2)}
-.ghostbtn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid rgba(236,230,220,.28);text-decoration:none;font:700 13px/1 var(--text);letter-spacing:.12em;text-transform:uppercase}
-.ghostbtn:hover{border-color:var(--amb)}
-.rows li{border-top:1px solid var(--line)}
-.rows li:last-child{border-bottom:1px solid var(--line)}
-.rows a{display:grid;grid-template-columns:20px 120px 1fr;align-items:center;gap:14px;min-height:66px;text-decoration:none}
-.rows .k{font:700 11.5px/1.3 var(--text);letter-spacing:.2em;text-transform:uppercase;color:var(--tx2)}
-.rows .v{font:600 19px/1.3 var(--text);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+/* hodiny + kontakt */
+.info{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.hours{grid-column:1 / span 6}
+.contact{grid-column:8 / span 5}
+.info h2{font-size:clamp(30px,3vw,40px);line-height:1.15;margin:16px 0 40px}
+.tbl{width:100%;border-collapse:collapse;border-top:1px solid var(--line-strong)}
+.tbl th,.tbl td{padding:14px 0;border-bottom:1px solid var(--line);font-weight:400;text-align:left}
+.tbl td{text-align:right;font-variant-numeric:tabular-nums lining-nums}
+.tbl tr[data-today] th,.tbl tr[data-today] td{color:var(--acc)}
+.tbl tr[data-today] th::after{content:"dnes";margin-left:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.tbl .off{color:var(--muted)}
+.small{font-size:14px;color:var(--muted);margin-top:16px}
+.dl{margin:0;border-top:1px solid var(--line-strong)}
+.dl div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.dl dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.dl dd{margin:0}
+.dl dd span{display:block;color:var(--muted);font-size:15px}
+.contact .btn{margin-top:32px}
 
-footer{padding:56px 0 48px;color:var(--tx2);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;border-top:1px solid var(--line);padding-top:24px}
+/* pätička */
+.foot{border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+/* mobilná lišta */
 .mbar{display:none}
 
-@media (max-width:1060px){.top{gap:22px}.leds{gap:18px}.top .tel{display:none}.hero{grid-template-columns:1fr;gap:10px}.well{max-width:640px}.keys{grid-template-columns:1fr 1fr}.key.lit{grid-column:1/-1;order:-1;min-height:0}.head{grid-template-columns:1fr;gap:14px}.contact{grid-template-columns:1fr}}
-@media (max-width:760px){
-  .wrap{padding:0 16px}
-  .top{padding:14px 0}
-  .brand span,.leds{display:none}
-  .panel{border-radius:24px}
-  .hero{padding:26px 18px 0;min-height:0}
-  .intro{padding-bottom:26px}
-  .well{padding:18px 18px 16px;border-radius:14px}
-  .rate{padding:18px 2px 24px}
-  .prog{gap:2px 18px}.prog a{font-size:14px}
-  section.band{padding-top:64px}
-  .keys{grid-template-columns:1fr}
-  .key{min-height:0;padding:24px 22px}
-  .key p.t{padding-top:16px}
-  .week{grid-template-columns:1fr}
-  .week li{flex-direction:row;align-items:center;justify-content:space-between;padding:14px 18px;border-left:0;border-top:1px solid rgba(255,182,72,.08)}
-  .week li:first-child{border-top:0}
-  .week .h{text-align:right}
-  .week .h small{display:inline;margin-left:6px}
-  .contact{padding:26px 18px 22px;gap:26px}
-  .addr{font-size:22px}
-  .rows a{grid-template-columns:16px 1fr;gap:4px 12px;padding:12px 0}
-  .rows .k{grid-column:2}
-  .rows .v{grid-column:2;font-size:17.5px}
-  .rows .led{grid-row:1/3}
-  footer{padding:40px 0 110px}
-  .mbar{display:grid;grid-template-columns:1fr 1.35fr;gap:10px;position:fixed;z-index:20;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,13,12,.95);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
-  .mbar a{min-height:50px;border-radius:999px;display:flex;align-items:center;justify-content:center;text-decoration:none;font:700 14px/1 var(--text);letter-spacing:.12em;text-transform:uppercase}
-  .mbar .c{border:1px solid rgba(236,230,220,.3)}
-  .mbar .start{min-height:50px;padding:0 14px}
+@media (max-width:1080px){
+  .nav{display:none}
+  .hero-text{grid-column:1 / span 12}
+  .facts{grid-column:1 / span 12;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;margin-top:40px}
+  .sec-head h2{grid-column:1 / span 12}
+  .sec-head p{grid-column:1 / span 8;grid-row:3;margin-top:8px}
+  .call-text,.call-side{grid-column:1 / span 12}
+  .call-side{margin-top:40px}
+  .hours{grid-column:1 / span 12}
+  .contact{grid-column:1 / span 12;margin-top:72px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:760px){
+  :root{--gut:16px}
+  body{font-size:16px;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .notice{font-size:12px}
+  .head .wrap{min-height:64px;gap:16px}
+  .brand span,.head-tel{display:none}
+  .brand b{font-size:28px}
+  .head .btn{padding:0 16px}
+  .hero{min-height:0;padding:40px 0 56px}
+  .hero h1{font-size:clamp(38px,11vw,52px);margin:16px 0 24px}
+  .lead{font-size:17px}
+  .cta{margin-top:32px}
+  .cta .btn{flex:1 1 100%}
+  .facts{grid-template-columns:1fr}
+  .sec{padding:72px 0}
+  .sec-head{margin-bottom:40px}
+  .sec-head .label,.sec-head h2,.sec-head p{grid-column:1 / span 12}
+  .services{grid-template-columns:1fr}
+  .svc,.svc:first-child,.svc:last-child{padding:32px 0 32px;border-left:0;border-bottom:1px solid var(--line)}
+  .svc h3{font-size:30px}
+  .call{padding:72px 0}
+  .call-tel{font-size:clamp(44px,13vw,64px);margin-bottom:32px}
+  .call .btn{flex:1 1 100%}
+  .dl div{grid-template-columns:96px 1fr}
+  .contact{margin-top:56px}
+  .foot{padding:32px 0}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--bg);border-top:1px solid var(--line-strong);padding:8px 16px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(42,31,38,.06)}
+  .mbar .btn{min-height:48px;padding:0 12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important}}
 </style>
 
-<p class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od Darwon · rezervácia vedie do ukážkovej administrácie, podnik ju nedostane</p>
+<div class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od Darwon, objednávky ani rezervácie tu nefungujú</div>
 
-<div class="wrap">
-<header class="top">
-  <a class="brand" href="#top" aria-label="Kikuš — na začiatok"><b>Kikuš</b><span>Kozmetický salón · Topoľčany</span></a>
-  <nav class="leds" aria-label="Hlavná navigácia">
-    <a href="#programy"><i class="led"></i><span class="u">Programy</span></a>
-    <a href="#hodiny"><i class="led"></i><span class="u">Hodiny</span></a>
-    <a href="#kontakt"><i class="led"></i><span class="u">Kontakt</span></a>
-  </nav>
-  <a class="tel u" href="tel:+421904390257">0904 390 257</a>
-  <a class="start" href="https://kikus-darwon.vercel.app/rezervacia">Objednať sa</a>
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kozmetický salón Kikuš — na začiatok"><b>Kikuš</b><span>Kozmetický salón · Topoľčany</span></a>
+    <nav class="nav" aria-label="Hlavná navigácia">
+      <a class="u" href="#sluzby">Služby</a>
+      <a class="u" href="#hodiny">Otváracie hodiny</a>
+      <a class="u" href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="head-tel num u" href="tel:+421904390257">0904 390 257</a>
+    <a class="btn btn-acc" href="tel:+421904390257">Zavolať</a>
+  </div>
 </header>
 
 <main id="top">
-  <section class="panel" aria-labelledby="h1">
-    <div class="hero">
-      <div class="intro">
-        <p class="silk">Streďanská 5075/13 · budova Meridiem</p>
-        <h1 id="h1">Kozmetický salón <em>Kikuš</em></h1>
-        <p class="quote">„Všetko pre krásu“<small>— ich Facebook</small></p>
-        <p class="lede">Nechtové štúdio, hybridné LED solárium a kozmetika pod jednou strechou. Na objednávky.</p>
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="label">Kozmetický salón Kikuš · Topoľčany</p>
+        <h1 id="h1">Kozmetika, nechty a hybridné solárium</h1>
+        <p class="lead">Kozmetický salón, nechtové štúdio a hybridné LED solárium v jednej prevádzke — v Topoľčanoch, v budove Meridiem na Streďanskej ulici. <strong>Salón pracuje na objednávky, termín si dohodnete telefonicky.</strong></p>
         <div class="cta">
-          <a class="start" href="https://kikus-darwon.vercel.app/rezervacia">Objednať sa</a>
-          <a class="call" href="tel:+421904390257"><span class="u">Zavolať 0904 390 257</span></a>
+          <a class="btn btn-acc" href="tel:+421904390257">Zavolať a dohodnúť termín</a>
+          <a class="btn btn-line" href="https://www.instagram.com/hybridneled/" rel="noopener" target="_blank">Instagram @hybridneled</a>
         </div>
-        <p class="fine">Online rezervácia — vyberiete si deň a čas, potvrdenie príde e-mailom.</p>
       </div>
-      <div>
-        <div class="well" role="group" aria-label="Displej: stav otvorenia salónu">
-          <div class="wtop">
-            <p class="st"><span id="statusDot"></span><span id="statusText">Na objednávky</span></p>
-            <p id="todayLabel"></p>
-          </div>
-          <span id="dispLabel">Otváracie hodiny</span>
-          <p class="digits" aria-hidden="true"><span class="ghost"><i>8</i><i>8</i><b>:</b><i>8</i><i>8</i></span><span id="dispDigits"><i>-</i><i>-</i><b>:</b><i>-</i><i>-</i></span></p>
-          <p class="unit" aria-hidden="true"><span id="dispUnit">hod&nbsp;:&nbsp;min</span><span>živý stav · Topoľčany</span></p>
-          <nav class="prog" aria-label="Programy salónu">
-            <a href="#p-nechty"><i class="led"></i>Nechty</a>
-            <a href="#p-solarium"><i class="led on"></i>Solárium</a>
-            <a href="#p-kozmetika"><i class="led"></i>Kozmetika</a>
-          </nav>
+      <dl class="facts">
+        <div>
+          <dt id="todayLabel"></dt>
+          <dd class="state"><span id="statusDot" aria-hidden="true"></span><span id="statusText">Otváracie hodiny nižšie</span></dd>
         </div>
-        <p class="rate"><b>5,0</b><span>hodnotenie na Google · 115 recenzií · október 2026</span></p>
+        <div>
+          <dt>Hodnotenie</dt>
+          <dd><span class="big num">5,0</span><small>z 5 · Google · 115 hodnotení</small></dd>
+        </div>
+        <div>
+          <dt>Adresa</dt>
+          <dd>Streďanská 5075/13<br><small>budova Meridiem · Topoľčany</small></dd>
+        </div>
+        <div>
+          <dt>Telefón</dt>
+          <dd><a class="num u" href="tel:+421904390257">0904 390 257</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="sluzby" aria-labelledby="h-sluzby">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Služby</p>
+        <h2 id="h-sluzby">Tri služby v jednom salóne</h2>
+        <p>Salón sa na Facebooku predstavuje vetou „Všetko pre krásu“. Na jednom mieste spája kozmetiku, nechtové štúdio a hybridné solárium.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <span class="label">Kozmetika</span>
+          <h3>Kozmetický salón</h3>
+          <p>Kozmetické ošetrenia v salóne na Streďanskej ulici. Termín si dohodnete telefonicky v otváracích hodinách.</p>
+          <p class="note">Ukážka návrhu — zoznam ošetrení a ceny doplníme podľa ponuky salónu.</p>
+        </article>
+        <article class="svc">
+          <span class="label">Nechty</span>
+          <h3>Nechtové štúdio</h3>
+          <p>Nechtové štúdio je súčasťou salónu, s rovnakými otváracími hodinami. Pracuje sa na objednávky.</p>
+          <p class="note">Ukážka návrhu — konkrétne úkony a ceny doplníme podľa ponuky salónu.</p>
+        </article>
+        <article class="svc">
+          <span class="label">Solárium</span>
+          <h3>Hybridné solárium</h3>
+          <p>V salóne je hybridné LED solárium. Na Instagrame ho salón opisuje takto:</p>
+          <q>Vytvára kolagén, ošetruje pokožku, vyhladzuje vrásky, tvorí vitamín D.</q>
+          <p class="src">Instagram salónu <a class="u" href="https://www.instagram.com/hybridneled/" rel="noopener" target="_blank">@hybridneled</a></p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="band" id="programy" aria-labelledby="h-prog">
-    <div class="head">
-      <div><p class="silk">Programy</p><h2 id="h-prog">Tri služby, jeden salón</h2></div>
-      <div><p>Salón uvádza na Instagrame tri oblasti: nechtové štúdio, hybridné solárium a kozmetický salón.</p><span class="demo">Ukážka návrhu · bez cien</span></div>
-    </div>
-    <div class="keys">
-      <article class="key" id="p-nechty">
-        <i class="led"></i>
-        <h3>Nechty</h3>
-        <p class="sub">Nechtové štúdio</p>
-        <p class="t">Ukážka návrhu — konkrétne úkony a ceny doplníme podľa ponuky salónu.</p>
-      </article>
-      <article class="key lit" id="p-solarium">
-        <i class="led"></i>
-        <h3>Solárium</h3>
-        <p class="sub">Hybridné LED solárium</p>
-        <blockquote><p>„Vytvára kolagén, ošetruje pokožku, vyhladzuje vrásky, tvorí vitamín D.“</p><cite>— z Instagramu salónu @hybridneled</cite></blockquote>
-        <a class="go" href="https://kikus-darwon.vercel.app/rezervacia"><span class="u">Objednať sa na solárium</span></a>
-      </article>
-      <article class="key" id="p-kozmetika">
-        <i class="led"></i>
-        <h3>Kozmetika</h3>
-        <p class="sub">Kozmetický salón</p>
-        <p class="t">Ukážka návrhu — ošetrenia a ceny doplníme podľa ponuky salónu.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="band" id="hodiny" aria-labelledby="h-hod">
-    <div class="head">
-      <div><p class="silk">Týždenný program</p><h2 id="h-hod">Otváracie hodiny</h2></div>
-      <div><p>Salón pracuje na objednávky — termín si rezervujte online alebo telefonicky.</p></div>
-    </div>
-    <ul class="week">
-      <li data-day="1"><span class="d"><i class="led"></i>Po</span><span class="h">8:00<small>– 17:00</small></span></li>
-      <li data-day="2"><span class="d"><i class="led"></i>Ut</span><span class="h">8:00<small>– 17:00</small></span></li>
-      <li data-day="3"><span class="d"><i class="led"></i>St</span><span class="h">8:00<small>– 17:30</small></span></li>
-      <li data-day="4"><span class="d"><i class="led"></i>Št</span><span class="h">8:00<small>– 17:30</small></span></li>
-      <li data-day="5"><span class="d"><i class="led"></i>Pi</span><span class="h">7:30<small>– 17:00</small></span></li>
-      <li data-day="6"><span class="d"><i class="led"></i>So</span><span class="h">9:00<small>– 11:00</small></span></li>
-      <li data-day="0"><span class="d"><i class="led"></i>Ne</span><span class="h x">zatvorené</span></li>
-    </ul>
-    <p class="wnote"><span>Na objednávky · hodiny podľa Google profilu salónu</span><span>Svieti dnešný deň</span></p>
-  </section>
-
-  <section class="band" id="kontakt" aria-labelledby="h-kon">
-    <div class="panel contact">
-      <div>
-        <p class="silk">Kontakt</p>
-        <h2 id="h-kon">Kde nás nájdete</h2>
-        <address class="addr">Streďanská 5075/13<span>budova Meridiem · 955 03 Topoľčany</span></address>
-        <a class="ghostbtn" href="https://www.google.com/maps/search/Kozmetick%C3%BD+sal%C3%B3n+Kiku%C5%A1+Topo%C4%BE%C4%8Dany" rel="noopener"><i class="led on"></i>Navigovať v Google Maps</a>
+  <section class="call" aria-labelledby="h-termin">
+    <div class="wrap">
+      <div class="call-text">
+        <p class="label">Objednávky</p>
+        <h2 id="h-termin">Termín si dohodnete telefonicky</h2>
+        <p>Salón pracuje na objednávky. Zavolajte v otváracích hodinách a dohodnite si deň a čas — na kozmetiku, nechty aj solárium.</p>
       </div>
-      <ul class="rows">
-        <li><a href="tel:+421904390257"><i class="led"></i><span class="k">Telefón</span><span class="v u">+421 904 390 257</span></a></li>
-        <li><a href="https://www.instagram.com/hybridneled/" rel="noopener"><i class="led"></i><span class="k">Instagram</span><span class="v u">@hybridneled</span></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61562590300594" rel="noopener"><i class="led"></i><span class="k">Facebook</span><span class="v u">Kikuš — kozmetický salón</span></a></li>
-      </ul>
+      <div class="call-side">
+        <a class="call-tel num" href="tel:+421904390257" aria-label="Zavolať na číslo 0904 390 257">0904 390 257</a>
+        <div class="cta">
+          <a class="btn btn-acc" href="tel:+421904390257">Zavolať</a>
+          <a class="btn btn-line" href="https://www.instagram.com/hybridneled/" rel="noopener" target="_blank">Napísať na Instagrame</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Otváracie hodiny a kontakt">
+    <div class="wrap info">
+      <div class="hours" id="hodiny">
+        <p class="label">Otváracie hodiny</p>
+        <h2>Kedy je salón otvorený</h2>
+        <table class="tbl">
+          <caption class="label" style="caption-side:bottom;text-align:left;text-transform:none;letter-spacing:0;font-size:14px;padding-top:16px">Na objednávky · podľa Google profilu salónu, október 2026</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Pondelok</th><td>8:00 – 17:00</td></tr>
+            <tr data-day="2"><th scope="row">Utorok</th><td>8:00 – 17:00</td></tr>
+            <tr data-day="3"><th scope="row">Streda</th><td>8:00 – 17:30</td></tr>
+            <tr data-day="4"><th scope="row">Štvrtok</th><td>8:00 – 17:30</td></tr>
+            <tr data-day="5"><th scope="row">Piatok</th><td>7:30 – 17:00</td></tr>
+            <tr data-day="6"><th scope="row">Sobota</th><td>9:00 – 11:00</td></tr>
+            <tr data-day="0"><th scope="row">Nedeľa</th><td class="off">zatvorené</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact" id="kontakt">
+        <p class="label">Kontakt</p>
+        <h2>Kde salón nájdete</h2>
+        <dl class="dl">
+          <div><dt>Adresa</dt><dd>Streďanská 5075/13<span>budova Meridiem · 955 03 Topoľčany</span></dd></div>
+          <div><dt>Telefón</dt><dd><a class="num u" href="tel:+421904390257">+421 904 390 257</a></dd></div>
+          <div><dt>Instagram</dt><dd><a class="u" href="https://www.instagram.com/hybridneled/" rel="noopener" target="_blank">@hybridneled</a></dd></div>
+          <div><dt>Facebook</dt><dd><a class="u" href="https://www.facebook.com/profile.php?id=61562590300594" rel="noopener" target="_blank">Kozmetický salón Kikuš</a></dd></div>
+        </dl>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/Kozmetick%C3%BD+sal%C3%B3n+Kiku%C5%A1+Topo%C4%BE%C4%8Dany" rel="noopener" target="_blank">Zistiť cestu v Google Maps</a>
+      </div>
     </div>
   </section>
 </main>
-</div>
 
-<footer><div class="wrap"><p>Neoficiálny návrh webu · Darwon · 2026</p><p>Kozmetický salón Kikuš · Streďanská 5075/13, Topoľčany</p></div></footer>
+<footer class="foot">
+  <div class="wrap">
+    <p>Neoficiálny návrh webu · Darwon · 2026</p>
+    <p>Kozmetický salón Kikuš · Streďanská 5075/13, Topoľčany</p>
+  </div>
+</footer>
 
 <nav class="mbar" aria-label="Rýchle akcie">
-  <a class="c" href="tel:+421904390257">Zavolať</a>
-  <a class="start" href="https://kikus-darwon.vercel.app/rezervacia">Objednať sa</a>
+  <a class="btn btn-acc" href="tel:+421904390257">Zavolať</a>
+  <a class="btn btn-line" href="https://www.google.com/maps/search/Kozmetick%C3%BD+sal%C3%B3n+Kiku%C5%A1+Topo%C4%BE%C4%8Dany" rel="noopener" target="_blank">Zistiť cestu</a>
 </nav>
 
 <script>
@@ -359,36 +378,3 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
   }
 })();
 </script>
-<script>
-(function(){
-  "use strict";
-  var dot=document.getElementById("statusDot"), txt=document.getElementById("statusText"),
-      lab=document.getElementById("dispLabel"), dig=document.getElementById("dispDigits"), unit=document.getElementById("dispUnit");
-  function nowMins(){
-    try{ var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Bratislava",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()), m={};
-      p.forEach(function(x){ m[x.type]=x.value; }); return (parseInt(m.hour,10)%24)*60+parseInt(m.minute,10); }
-    catch(e){ var d=new Date(); return d.getHours()*60+d.getMinutes(); }
-  }
-  function cells(s){ return s.split("").map(function(c){ return c===":" ? "<b>:</b>" : "<i>"+c+"</i>"; }).join(""); }
-  function two(n){ return (n<10?"0":"")+n; }
-  function draw(){
-    if(!dot||!txt||!dig) return;
-    var t=txt.textContent, times=t.match(/\d{1,2}:\d{2}/g);
-    if(!times) return;
-    var tm=times[times.length-1], a=tm.split(":");
-    if(dot.className==="is-open"||dot.className==="is-closing"){
-      var left=Math.max(0,(+a[0])*60+(+a[1])-nowMins());
-      dig.innerHTML=cells(two(Math.floor(left/60))+":"+two(left%60));
-      lab.textContent="Do zatvorenia o "+tm+" zostáva";
-      unit.innerHTML="hod&nbsp;:&nbsp;min";
-    }else{
-      var w=t.match(/otvárame (.+?) o \d/);
-      dig.innerHTML=cells(two(+a[0])+":"+a[1]);
-      lab.textContent="Otvárame "+(w?w[1]+" ":"")+"o";
-      unit.textContent="čas otvorenia";
-    }
-  }
-  draw(); setInterval(draw,60000);
-})();
-</script>
-</html>
